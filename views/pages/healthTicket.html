@@ -1,0 +1,62 @@
+<div class = "row row-sm md-whiteframe-z2" ng-controller = "HealthTicket_Ctrlr">
+    <div>
+        <div class="p-h b-b b-light">
+            <ul class="nav nav-lines nav-md" style="border-color: #00db55;">
+                <li ng-model="hideTicket"  ng-init = "item = '1'" ng-class="{active:item == 1}"><a ng-click="item = 1" style="font-size: 67%;" href>Prescription Drug ID Card</a></li>
+                <li ng-model="hideTicket"   ng-class="{active:item == 2}"><a ng-click="PharmacyInfo()" style="font-size: 67%;" href>Pharmacy Information</a></li>
+
+
+            </ul>
+        </div>
+
+
+    <h3 style="text-align: center;margin-bottom: 2%;"><u>PRESCRIPTION DRUG ID CARD</u></h3>
+        <div class="row row-sm" style="border-style: solid;border-color: rgb(0, 121, 52);/*! width: 50%; *//*! padding-left: 8px; */margin-left: 0.5%;margin-right: 0.5%;">
+
+        <div class ="row row-sm">
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Patient's Name:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{PatientName}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Date of Injury:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{DateOfInjury}}
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Claim #:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{HealthTicketclaimNumber}}
+        </div>
+            </div>
+        <div class ="row row-sm">
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Employer:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{Employer}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Body Part:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{BodyPart}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            State of Jurisdiction:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{StateOfJurisdiction}}
+        </div>
+            </div>
+
+    </div>
+    <h4 style="margin-top: 2%;/*! margin-left: auto; *//*! margin-right: auto; */text-align: center;">Card Valid for Date of Injury and Body Part Only</h4>
+      </div>
+
+</div>

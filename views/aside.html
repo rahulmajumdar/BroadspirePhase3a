@@ -1,0 +1,106 @@
+<div class="box bg-white">
+  <div class="navbar md-whiteframe-z1 no-radius" ng-class="$state.current.data.theme ? $state.current.data.theme.primary : app.setting.theme.primary">
+      <!-- brand -->
+      <a class="navbar-brand">
+      <!--  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
+              width: 24px; height: 24px;">
+            <path d="M 50 0 L 100 14 L 92 80 Z" fill="rgba(139, 195, 74, 0.5)"></path>
+            <path d="M 92 80 L 50 0 L 50 100 Z" fill="rgba(139, 195, 74, 0.8)"></path>
+            <path d="M 8 80 L 50 0 L 50 100 Z" fill="#f3f3f3"></path>
+            <path d="M 50 0 L 8 80 L 0 14 Z" fill="rgba(220, 220, 220, 0.6)"></path>
+          </svg>-->
+        <img src="img/broadspire_logo.png" alt="." style="max-height: 58px;">
+       <!-- <span class="hidden-folded m-l inline">{{app.name}}</span>-->
+      </a>
+      <!-- / brand -->
+  </div>
+  <div class="box-row">
+    <div class="box-cell scrollable hover">
+      <div class="box-inner">
+        <div class="p hidden-folded" ng-class="$state.current.data.theme ? $state.current.data.theme.primary+'-50' : app.setting.theme.primary+'-50'" style="background-image:url(images/bg.png); background-size:cover">
+
+
+         <div class="rounded w-64 bg-white inline pos-rlt" style="width:0px;height:0px;">
+
+           <!-- <img src="images/a0.jpg" class="img-responsive rounded">-->
+          </div>
+          <a class="m-t-sm active" ui-toggle-class="show, show" target="#nav, #account">
+            <span  style="font-size:18px;">Broadspire My Claim<span style = "font-size:8px;position:relative;top:-6px;">SM</span></span>
+           <!-- <span class="pull-right auto">
+              <i class="fa inline fa-caret-down"></i>
+              <i class="fa none fa-caret-up"></i>
+            </span>-->
+          <!--anuj.kumar@primussoft.com-->
+          </a>
+        </div>
+       <!--  <div id="nav" ng-include="'views/partials/aside.nav.uikit.html'"></div> -->
+        <div id="account" class="hide m-v-xs show">
+          <nav>
+            <ul class="nav">
+              <li ng-class="{active:item == 1}" ng-init = "item = '1'">
+                <a ng-click="item = 1" md-ink-ripple ui-sref="page.claimpaymentinfo">
+                  <img src = "img/ClaimPayment_Info.png" style="width:32px;height:32px;margin-right:15px;"/>
+                  <!--<i class="icon mdi-action-perm-contact-cal i-20"></i>-->
+                  <span>Claim Payment Info</span>
+                </a>
+              </li>
+              <li ng-class="{active:item == 2}">
+                <a ng-click="getClaims()" md-ink-ripple ui-sref="page.healthticket">
+                  <img src = "img/Health-Ticket.png" style="width:32px;height:32px;margin-right:15px;"/>
+                  <span>Health Ticket</span>
+                </a>
+              </li>
+              <li ng-class="{active:item == 3}">
+                <a ng-click="item = 3" md-ink-ripple>
+                  <img src = "img/Contact-Adjuster.png" style="width:32px;height:32px;margin-right:15px;"/>
+                  <span>Contact Adjuster</span>
+                </a>
+              </li>
+              <li ng-class="{active:item == 4}">
+                <a ng-click="item = 4" md-ink-ripple>
+                  <img src = "img/physicianpharmacy-look-up.png" style="width:32px;height:32px;margin-right:15px;"/>
+                  <span>Physician/Pharmacy Lookup</span>
+                </a>
+              </li>
+              <li ng-class="{active:item == 5}">
+                <a ng-click="item = 5" md-ink-ripple>
+                  <img src = "img/FAQ.png" style="width:32px;height:32px;margin-right:15px;"/>
+                  <span>FAQ</span>
+                </a>
+              </li>
+              <li ng-class="{active:item == 6}">
+                <a ng-click="item = 6" md-ink-ripple>
+                 <!-- <img src = "img/Social-Media.png" style="width:32px;height:32px;margin-right:15px;"/>-->
+                  <img src = "img/social.png" style="width:32px;height:32px;margin-right:15px;"/>
+                  <span>Social Media</span>
+                </a>
+              </li>
+              <li ng-class="{active:item == 7}">
+                <a ng-click="item = 7" md-ink-ripple>
+                  <img src = "img/tutorial_3.png" style="width:32px;height:32px;margin-right:15px;"/>
+                  <span>Tutorial</span>
+                </a>
+              </li>
+              <li ng-class="{active:item == 8}">
+                <a ng-click="item = 8" md-ink-ripple>
+                  <img src = "img/settings.png" style="width:32px;height:32px;margin-right:15px;"/>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li ng-class="{active:item == 9}">
+                <a ng-click="item = 8" md-ink-ripple ui-sref="access.signin">
+                  <img src = "img/logout.png" style="width:32px;height:32px;margin-right:15px;"/>
+
+                  <span>Logout</span>
+                </a>
+              </li>
+              <li class="m-v-sm b-b b"></li>
+             
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>

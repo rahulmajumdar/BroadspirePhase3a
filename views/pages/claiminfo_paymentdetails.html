@@ -1,0 +1,69 @@
+<div class = "row row-sm" ng-controller = "ClaimPaymentInfo_PaymentDetails_Ctrlr" data-ng-init="init()">
+    <div class = "col-sm-12 center-block" style="float:none;text-align: center;font-size: 18px;">
+<br><span text-center>Claim Number :  </span>
+        <span text-center ng-model = "claimNumber">{{claimNumber}}</span>
+        </div> <br>
+<ul class="nav nav-lists b-t" ui-nav style="font-size:16px;">
+    <div class = "col-sm-6" >
+    <li class="active">
+        <a href>Check Number</a>
+    </li>
+        </div>
+    <div class = "col-sm-6" >
+    <li>
+        <a href ng-model="checkNumber">{{checkNumber}}</a>
+    </li><br>
+        </div>
+
+
+    <div class = "col-sm-6" >
+        <li class="active">
+            <a href>Total Payment Amount</a>
+        </li>
+    </div>
+    <div class = "col-sm-6" >
+        <li>
+            <a href ng-model = "paymentAmount">{{paymentAmount}}</a>
+        </li><br>
+    </div>
+
+    <div class = "col-sm-6" >
+        <li class="active">
+            <a href>Paid To</a>
+        </li>
+    </div>
+    <div class = "col-sm-6" >
+        <li>
+            <a href ng-model = "paidTo">{{paidTo}}</a>
+        </li><br>
+    </div>
+
+
+    <div class = "col-sm-6" >
+        <li class="active">
+            <a href>Check Date</a>
+        </li>
+    </div>
+    <div class = "col-sm-6" >
+        <li>
+            <a href ng-model = "checkDate">{{checkDate}}</a>
+        </li><br>
+    </div>
+
+    <div class = "col-sm-6" >
+        <li class="active">
+            <a href>Address</a>
+        </li>
+    </div>
+    <div class = "col-sm-6" >
+        <li>
+            <a href ng-model = "address1">{{address1}}</a><br>
+            <a href ng-model = "address2">{{address2}}</a><br>
+            <a href ng-model = "cityStateZip">{{cityStateZip}}</a>
+        </li><br>
+    </div>
+
+
+
+</ul>
+    </div>

@@ -1,0 +1,98 @@
+<div class = "row row-sm md-whiteframe-z2" ng-controller = "HealthTicketPharmacyInfo_Ctrlr">
+    <div>
+        <div class="p-h b-b b-light">
+            <ul class="nav nav-lines nav-md" style="border-color: #00db55;">
+                <li ng-model="hideTicket" ui-sref="page.healthticket"  ng-class="{active:item == 1}"><a ng-click="item = 1" style="font-size: 67%;" href>Prescription Drug ID Card</a></li>
+                <li ng-model="hideTicket"  ng-init = "item = '2'" ng-class="{active:item == 2}"><a ng-click="item = 2" style="font-size: 67%;"  href>Pharmacy Information</a></li>
+
+
+            </ul>
+        </div>
+
+
+
+
+
+
+    <h3 style="text-align: center;"><u>PHARMACY INFORMATION</u></h3>
+    <h4 style="text-align: center;">Primary Card</h4>
+        <div class="row row-sm" style="border-style: solid;border-color: rgb(0, 121, 52);/*! width: 50%; *//*! padding-left: 8px; */margin-left: 0.5%;margin-right: 0.5%;">
+
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Patient's Name:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{PatientName}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Bin:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{Bin}}
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            PCN:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{PCN}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Group #:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{GroupNumber}}
+        </div>
+
+    </div>
+        <div class="row row-sm" style="margin-left: 0.5%;">
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{PharmacyName}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{PharmacyPhoneNumber}}
+        </div>
+    </div>
+
+
+
+        <div ng-show="secondaryCard" class="row row-sm" style="border-style: solid;border-color: rgb(0, 121, 52);/*! width: 50%; *//*! padding-left: 8px; */margin-left: 0.5%;margin-right: 0.5%;">
+            <h4 style="text-align: center;">Secondary Card</h4>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Patient's Name:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{PatientName}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Bin:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{SecBin}}
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            PCN:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{SecPCN}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2">
+            Group #:
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{SecGroupNumber}}
+        </div>
+
+    </div>
+        <div class="row row-sm" style="margin-left: 0.5%;">
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{SecPharmacyName}}
+        </div>
+        <div class="col-xs-6 col-sm-6 col-lg-2 col-md-2" style="font-weight: bold;">
+            {{SecPharmacyPhoneNumber}}
+        </div>
+    </div>
+    <h5 style="margin-left: 0.5%;">The Pharmacy benefit card is only to be used for medication prescribed for your work related injury. By using this card, you acknowledge and accept financial responsibility for any prescription billed under this card that are later found to be unrelated to the injury.</h5>
+</div>
+</div>

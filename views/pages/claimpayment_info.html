@@ -1,0 +1,247 @@
+<div class = "row row-sm md-whiteframe-z2" ng-controller = "ClaimPaymentInfo_Ctrlr" data-ng-init="init()">
+    <div style="margin-top:-2px;">
+        <div class="p-h b-b b-light">
+            <ul class="nav nav-lines nav-md" style="font-size: 16px;line-height: 1.029;border-color: #00db55;">
+                <li ng-click="currentclaim = true;myclaim = true;addclaim = false"  ng-class="{active:item == 1}"><a ng-click="item = 1" href>Add Claim</a></li>
+                <li ng-click="currentclaim = false;myclaim = true;addclaim = true" ng-init = "item = '2';myclaim = true;addclaim = true" ng-class="{active:item == 2}"><a ng-click="item = 2" href>Current Claim</a></li>
+                <li  ng-click = "currentclaim = true;myclaim = false;addclaim = true" ng-class="{active:item == 3}"><a ng-click="item = 3" href>My Claims </a></li>
+
+            </ul>
+        </div>
+
+        <!--------------------------------------------------Add Claim view starts------------------------------------------------------->
+        <div class = "row row-sm" ng-hide="addclaim">
+            <div class = "col-sm-12 center-block" style="float:none;text-align: center;font-size: 18px;">
+                <br><span text-center style="font-weight: bold;color: #258c52;text-decoration: underline;">Add Claim To List  </span>
+            </div> <br><br>
+            <ul class="nav nav-lists" ui-nav style="font-size:16px;text-align:center;">
+                <div class = "col-sm-4" >
+                    <li class="active">
+                        <a style = "font-weight: bold;color: #646569;" href>User Id</a><br>
+                        <a href ng-model = "userId">{{userId}}</a>
+                    </li><br>
+                </div>
+                <div class = "col-sm-4" >
+                    <li>
+                        <a href style = "font-weight: bold;color: #646569;">Last 4 digits of Social Security No</a><br>
+                        <a href ng-model = "userSSN">{{userSSN}}</a>
+                    </li><br>
+                </div>
+
+
+                <div class = "col-sm-4" >
+                    <li class="active">
+                        <a href style = "font-weight: bold;color: #646569;">Date Of Birth:</a><br>
+                        <a href ng-model = "userDOB">{{userDOB}}</a>
+                    </li><br><br>
+                </div>
+                <div class = "col-sm-4" >
+                    <li>
+                        <a href style = "font-weight: bold;color: #646569;">Home Zip Code</a><br>
+                        <a href ng-model = "zipCode">{{zipCode}}</a>
+                    </li><br>
+                </div>
+
+                <div class = "col-sm-4">
+                    <li class="active">
+                        <a href style = "font-weight: bold;color: #646569;">Date Of Loss</a><br>
+
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4">
+                                <input type = "text" placeholder="mm" class="form-control" type="number"/>
+                             </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <input type = "text" placeholder="dd" class="form-control" type="number"/>
+                               </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <input type = "text" placeholder="yy" class="form-control" type="number"/>
+                            </div>
+                        </div>
+                    </li><br>
+                </div>
+                <div class = "col-sm-4" >
+                    <li>
+                        <a href style = "font-weight: bold;color: #646569;">Claim No</a><br>
+                        <input  style = "width:60%;margin-left: auto;margin-right: auto;" class="form-control" type="number" />
+                    </li><br>
+                </div>
+
+
+
+
+
+
+
+
+            </ul><br><br>
+
+            <div class="row">
+                <div class = "col-xs-4">
+                </div>
+                <div class = "col-xs-4">
+                    <button md-ink-ripple type="submit" class="md-btn md-raised btn-block p-h-md" style = "margin-bottom:20px;background-color: #007934;color: #ffffff;">Add Claim</button>
+
+<!--
+                    <button md-ink-ripple type="submit" class="md-btn md-raised btn-block p-h-md" style = "background-color: #dddddd;color: #ffffff;">Cancel</button>
+-->
+                </div>
+                <div class = "col-xs-4">
+                  </div>
+            </div>
+
+
+        </div>
+
+        <!--------------------------------------------------Add Claim view ends------------------------------------------------------->
+
+
+
+        <!-----------------------------------Current Claim view starts-------------------------------------------------->
+        <div class = "col-sm-12 center-block" ng-hide="currentclaim" style="line-height:1.22857143;font-size: 17px;color: #258c52;font-weight:normal;">
+            <div class = "col-sm-3"></div>
+            <div class = "col-sm-6">
+        <div class = "claimtop clnum" style="text-align:center;">
+           <span class = "txtleft" text-center style = "font-weight:bold;">Claim Number:</span>
+
+            <span class = "txtright" text-center ng-model = "claimNumber" >{{claimNumber}}</span>
+        </div>
+        <div class = "claimtop clstat"  style="text-align:center;">
+            <span class = "txtleft" text-center style = "font-weight:bold;">Claim Status:    </span>
+            <span class = "txtright" text-center ng-model = "claimStatus">{{claimStatus}}</span>
+        </div>
+        <div class = "claimtop cltot"  style="text-align:center;">
+            <span class = "txtleft" text-center style = "font-weight:bold;">Total Amount:  </span>
+            <span class = "txtright" text-center ng-model = "totalAmount">{{totalAmount}}</span>
+        </div></div>
+            <div class = "col-sm-3"></div>
+        </div>
+
+    <div class = "col-sm-12" ng-hide="currentclaim">
+
+   <br> <div class="list-group" style="float:left;width:45%;margin-left:5%;text-align:center;">
+        <a class="list-group-item"  style="background-color:#258c52;color:#ffffff;border-top-left-radius: 0px;border-top-right-radius: 0px;">
+            <div class = "col-sm-6" >
+                Check Number
+            </div>
+            <div class = "col-sm-6" >
+                Check Date
+            </div>
+<div style="clear:both;"></div>
+        </a>
+        <a class="list-group-item" ng-click = "clickedItemTransNumber(item.trans_id)" ng-repeat="item in claimPaymentInfoList">
+            <div class = "col-sm-6">
+                {{item.trans_number}}
+            </div>
+            <div class = "col-sm-6">
+                {{item.date_of_check}}
+            </div>
+            <div style="clear:both;"></div>
+        </a>
+
+    </div>
+
+
+
+
+
+        <div class="list-group" style="float:right;width:45%;margin-right:5%;text-align:center;">
+            <a class="list-group-item" style="background-color:#258c52;color:#ffffff;border-top-left-radius: 0px;border-top-right-radius: 0px;">
+                <div class = "col-sm-6" >
+                    Check Amount
+                </div>
+                <div class = "col-sm-6" >
+                    From - To
+                </div>
+                <div style="clear:both;"></div>
+            </a>
+            <a class="list-group-item" ng-repeat="item in claimPaymentInfoList" style="padding: 12px 0px;">
+                <div class = "col-sm-6">
+                    {{item.amount}}
+                </div>
+                <div class = "col-sm-6" style="padding-left:0px;padding-right:0px;">
+                    {{item.from_date}} - {{item.to_date}}
+                </div>
+                <div style="clear:both;"></div>
+            </a>
+
+
+
+        </div>
+  <!--  </div>-->
+      <div class = "col-sm-12" style="text-align:center;">
+        <ul class="pagination" >
+<!--
+            <li ng-repeat="i in list" ng-class="{'active': selectedTab == i}" ng-click = "selectedTab = i"> <a ng-click="paginationItemClicked($event);" href="#">{{i}}</a></li>
+-->
+            <li ng-repeat="i in list" ng-init = "$parent.selected = '1'" ng-class="{'active': i == $parent.selected}" ng-click = "$parent.selected = i"> <a ng-click="paginationItemClicked($event);" href="#">{{i}}</a></li>
+
+        </ul>
+    </div> </div>
+
+        <!-----------------------------------Current Claim view ends-------------------------------------------------->
+
+
+        <!-----------------------------------My Claim table starts-------------------------------------------------->
+
+        <div class = "col-sm-12" ng-hide="myclaim">
+
+            <br> <div class="list-group" style="float:left;width:45%;margin-left:5%;text-align:center;">
+            <a class="list-group-item"  style="background-color:#258c52;color:#ffffff;border-top-left-radius: 0px;border-top-right-radius: 0px;">
+                <div class = "col-sm-6" >
+                    Check Number
+                </div>
+                <div class = "col-sm-6" >
+                    Status
+                </div>
+                <div style="clear:both;"></div>
+            </a>
+            <a class="list-group-item"   ng-repeat="item in myClaimInfoList">
+                <div class = "col-sm-6">
+                    {{item.claim_number}}
+                </div>
+                <div class = "col-sm-6">
+                    {{item.claim_status}}
+                </div>
+                <div style="clear:both;"></div>
+            </a>
+
+        </div>
+
+
+
+
+
+            <div class="list-group" style="float:right;width:45%;margin-right:5%;text-align:center;">
+                <a class="list-group-item" style="background-color:#258c52;color:#ffffff;border-top-left-radius: 0px;border-top-right-radius: 0px;">
+                    <div class = "col-sm-6" >
+                        Date of Loss
+                    </div>
+                    <div class = "col-sm-6" >
+                        Adjuster
+                    </div>
+                    <div style="clear:both;"></div>
+                </a>
+                <a class="list-group-item" ng-repeat="item in myClaimInfoList" style="padding: 12px 0px;">
+                    <div class = "col-sm-6">
+                        {{item.event_date}}
+                    </div>
+                    <div class = "col-sm-6" style="padding-left:0px;padding-right:0px;">
+                        {{item.adjuster_name}}
+                    </div>
+                    <div style="clear:both;"></div>
+                </a>
+
+
+
+
+            </div></div>
+<!-----------------------------------My Claim table ends-------------------------------------------------->
+
+
+
+
+
+
+
+        </div>
+    </div>
