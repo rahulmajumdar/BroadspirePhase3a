@@ -6,7 +6,7 @@ $scope.prescriptionDrugIDInfo = function() {
 
 }
 $scope.PharmacyInfo = function() {
-//alert('here');
+ //alert('here');
 //alert(localStorage.getItem('PharmacyInfoCheck'));
 if(localStorage.getItem('PharmacyInfoCheck')=='null'){
 alert('Pharmacy Information is not available');
